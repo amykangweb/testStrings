@@ -14,6 +14,19 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Hello, World!");
     }
     
+    int apples = 3 + 5 + 4 + 1;
+    
+    int oranges = 10 - 3;
+    int totalFruit = apples + oranges;
+    
+    int eggsPerCarton = 12;
+    int eggs = eggsPerCarton * 4;
+    
+    int baskets = 4;
+    
+    float itemsPerBasket = (apples + oranges + eggs) / baskets;
+    
+    
     bool hasLicense;
     hasLicense = true;
     NSLog(@"has license: %i", hasLicense);
