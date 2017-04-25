@@ -16,6 +16,13 @@ enum popcornSizes {
 
 #import <Foundation/Foundation.h>
 
+NSString *empMessage;
+
+void printTicket() {
+    empMessage = @"printed message";
+    NSLog(@"%@", empMessage);
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...7815
@@ -28,7 +35,7 @@ int main(int argc, const char * argv[]) {
     
     bool ageDiscount;
     bool isMatinee = false;
-    bool isEmployee = false;
+    bool isEmployee = true;
     
     float regularPrice = 10;
     float ageOrMatineePrice = 8.5;
@@ -60,15 +67,22 @@ int main(int argc, const char * argv[]) {
         
         customerPrice = employeeRegPrice;
         
+        empMessage = @"Thanks for being part of the team. Enjoy your movie!";
+        NSLog(@"%@", empMessage);
+        
     } else if(isEmployee && isMatinee) {
         
         customerPrice = employeeMatineePrice;
+        empMessage = @"Thanks for being part of the team. Enjoy your FREE movie!";
+        NSLog(@"%@", empMessage);
         
     } else {
         
         customerPrice = regularPrice;
         
     }
+    
+    printTicket();
     
     // Reg Price $10
     // Senior Price $5
