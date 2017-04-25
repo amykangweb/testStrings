@@ -22,6 +22,54 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Hello, World!");
     }
     
+    // AND &&
+    // OR ||
+    // NOT !
+    
+    bool ageDiscount;
+    bool isMatinee = false;
+    bool isEmployee = false;
+    
+    float regularPrice = 10;
+    float ageOrMatineePrice = 8.5;
+    float ageAndMatineePrice = 6.5;
+    float employeeRegPrice = 4.5;
+    float employeeMatineePrice = 0;
+    
+    int customerAge = 20;
+    float customerPrice;
+    
+    int youthAge = 13;
+    int seniorAge = 65;
+    
+    if((customerAge < youthAge) || (customerAge >= seniorAge)) {
+        ageDiscount = YES;
+    }
+    
+    ageDiscount = ((customerAge < youthAge) || (customerAge >= seniorAge)) ? YES : NO;
+    
+    if(ageDiscount && isMatinee && !isEmployee) {
+        
+        customerPrice = ageAndMatineePrice;
+        
+    } else if((ageDiscount || isMatinee) && !isEmployee) {
+        
+        customerPrice = ageOrMatineePrice;
+        
+    } else if(isEmployee && !isMatinee) {
+        
+        customerPrice = employeeRegPrice;
+        
+    } else if(isEmployee && isMatinee) {
+        
+        customerPrice = employeeMatineePrice;
+        
+    } else {
+        
+        customerPrice = regularPrice;
+        
+    }
+    
     // Reg Price $10
     // Senior Price $5
     // Matinee price $4
