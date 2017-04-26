@@ -29,6 +29,29 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Hello, World!");
     }
     
+    int runningTotal = 0;
+    
+    for(int i = 1; i <= 50; i++) {
+        runningTotal = runningTotal + i;
+        NSLog(@"i = %i", i);
+    }
+    
+    /*
+     
+    While loop example
+     
+    int ticketsInGroup;
+    
+    while(ticketsSold <= 100) {
+        // print popcorn coupon
+        ticketsInGroup++;
+        if(ticketsInGroup >= 3) {
+            break;
+        }
+    }
+     
+     */
+    
     // AND &&
     // OR ||
     // NOT !
